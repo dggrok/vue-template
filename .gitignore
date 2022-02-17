@@ -1,0 +1,15 @@
+.idea/
+.vscode/
+.DS_Store
+
+node_modules/
+yarn-error.log
+package-lock.json
+yarn.lock
+lerna-debug.log
+
+dist/
+lib
+es
+types
+.github

@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+GITMOJI_URL=https://frontend-test-1256919685.cos.ap-shanghai.myqcloud.com/standard/gitmojis.json npx --no-install commitlint --edit "$1"
