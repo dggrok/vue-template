@@ -14,8 +14,7 @@
     "clean": "npx rimraf dist lib es node_modules"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.4",
-    "@babel/eslint-parser": "^7.17.0",
+    "babel-eslint": "^10.1.0",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-vue": "^7.19.1"
   }
