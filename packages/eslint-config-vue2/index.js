@@ -16,16 +16,9 @@ module.exports = {
     'import/extensions': ['.js', '.vue']
   },
   extends: ['plugin:vue/recommended', 'plugin:import/errors', 'plugin:import/warnings'],
-  parser: "@babel/eslint-parser",
   parserOptions: {
-    "ecmaVersion": 8,
-    "sourceType": "module",
-    "requireConfigFile": false,
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
-      "impliedStrict": true,
-      "classes": true
-    }
+    parser: 'babel-eslint',
+    sourceType: 'module'
   },
   rules: {
     'comma-dangle': OFF,
