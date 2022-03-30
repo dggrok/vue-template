@@ -1,0 +1,63 @@
+.jy-treeselect {
+  position: relative;
+  width: 240px;
+  line-height: 30px;
+  background-color: #fff;
+  .selector-tags {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: calc(100% - 32px);
+    min-height: 27px;
+    line-height: 1;
+    background-color: #fff;
+    input::placeholder{
+      color:#C0C4CC !important;
+      font-size: 14px !important;
+    }
+    .selector-tag {
+      height: 24px;
+      margin: 2px 0 2px 6px;
+      padding: 0 8px;
+      line-height: 22px;
+    }
+
+    .selector-filter-input {
+      box-sizing: border-box;
+      width: 0;
+      padding: 0 0 0 10px;
+      border: none;
+      outline: 0;
+    }
+  }
+
+  .treeselect-popover {
+    font-size: 14px;
+  }
+  .el-input .el-select__caret {
+    transform: rotateZ(180deg);
+    transition: transform 0.3s;
+    &.is-reverse {
+      transform: rotateZ(0);
+    }
+  }
+  .el-tag__close.el-icon-close {
+    top: 0;
+    right: -7px;
+    background-color: #C0C4CC;
+    transform: scale(.8);
+  }
+
+}
+
+.el-select-dropdown {
+  .treeselect-popover {
+    font-size: 14px;
+    .treeselect-tree {
+      padding: 6px 0;
+    }
+  }
+}

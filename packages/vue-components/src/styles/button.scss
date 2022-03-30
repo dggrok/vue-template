@@ -1,0 +1,51 @@
+@import './base/theme.scss';
+@import './mixins/mixins.scss';
+
+.jy-button {
+  box-sizing: border-box;
+  height: 30px;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  &.is-disabled {
+    color: #999;
+    background-color: #e5e5e5;
+    border: 1px solid #ccc;
+    cursor: not-allowed;
+    &:hover{
+      color: #999;
+      background-color: #e5e5e5;
+      border: 1px solid #ccc;
+    }
+  }
+}
+.jy-button--default {
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  &:hover{
+    color: #00A4FF;
+    border-color: #00A4FF;
+  }
+}
+.jy-button--primary {
+  color: #fff;
+  background-color: #2B303D;
+  border: 1px solid #2B303D;
+  &:hover{
+    background-color: #2A3F75;
+  }
+}
+.jy-button--small {
+  height: 30px;
+  padding: 0 20px;
+  line-height: 30px;
+}
+.jy-button--medium {
+  height: 36px;
+  padding: 0 24px;
+  line-height: 36px;
+}

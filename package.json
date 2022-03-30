@@ -25,6 +25,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "admin:dev": "lerna exec --scope @cyw/vue-admin npm run dev",
+    "build": "node scripts/build.js",
     "clean": "node scripts/clean.js",
     "precommit": "lint-staged",
     "prepare": "husky install"

@@ -4,7 +4,7 @@ module.exports = {
   ],
 
   packages: [
-    // "packages/jy-vue-components",
+    "packages/vue-components",
   ],
 
   projects: [

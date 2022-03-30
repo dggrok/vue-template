@@ -1,0 +1,7 @@
+public/
+lib/
+node_modules/
+.vscode/
+tests/
+.eslintrc.js
+commitlint.config.js

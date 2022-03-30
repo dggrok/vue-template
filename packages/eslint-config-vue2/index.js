@@ -73,6 +73,7 @@ module.exports = {
       }
     ],
     'vue/html-self-closing': 'off',
+    'vue/no-mutating-props': 'off',
     'vue/singleline-html-element-content-newline': 'off', // 带属性的标签中的内容需另起一行
     'vue/multiline-html-element-content-newline': 'off', // 元素中有多行内容，需每行内容各占一行
     'vue/no-v-html': 'off', // 关闭禁止使用v-html的规定
