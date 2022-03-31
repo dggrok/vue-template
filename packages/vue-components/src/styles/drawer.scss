@@ -1,0 +1,140 @@
+@import './base/theme.scss';
+@import './mixins/mixins.scss';
+
+.jy-drawer {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 9999;
+	width: 0;
+	// height: calc(100% - 101px);
+	.jy-drawer-mask {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 0;
+		background-color: rgba($color: #000, $alpha: 0.6);
+		opacity: 0;
+		transition: opacity 0.3s linear;
+	}
+	.jy-drawer-content-wrapper {
+		position: absolute;
+    right: -600px;
+    display: flex;
+    flex-direction: column;
+		width: 300px;
+		height: 100%;
+		background-color: #fff;
+		box-shadow: none;
+    transition: right .3s cubic-bezier(.7,.3,.1,1),box-shadow .3s cubic-bezier(.7,.3,.1,1);
+    .el-scrollbar__wrap {
+      overflow: auto;
+    }
+    .jy-drawer-title {
+      display: flex;
+      flex: none;
+      align-items: center;
+      height: 64px;
+      padding-left: 30px;
+      color: #333;
+      border-bottom: 1px solid #e5e5e5;
+      .jy-drawer-title-text {
+        flex: 1;
+      }
+      .el-icon-close {
+        margin: 0 20px 0 6px;
+        color: #ccc;
+        font-size: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover {
+          background-color: #e8e8e8;
+        }
+      }
+    }
+    .jy-drawer-content-wrap {
+			position: relative;
+			z-index: 1;
+      flex-grow: 1;
+      width: 100%;
+      overflow: hidden;
+      .jy-drawer-content {
+        box-sizing: border-box;
+        padding: 20px 37px 0 20px;
+      }
+    }
+    .jy-drawer-footer {
+      display: flex;
+      flex: none;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid #e5e5e5;
+      .jy-drawer-footer-btn {
+        box-sizing: border-box;
+        height: 32px;
+        margin-right: 10px;
+        padding: 0 24px;
+        font-size: 14px;
+        line-height: 32px;
+        text-align: center;
+        border-radius: 4px;
+        cursor: pointer;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      .jy-drawer-footer-btn__default {
+        color: #333;
+        background-color: #fff;
+        border: 1px solid #d9d9d9;
+        &:hover{
+          color: #00A4FF;
+          border-color: #00A4FF;
+        }
+      }
+      .jy-drawer-footer-btn__primary {
+        color: #fff;
+        background-color: #2B303D;
+        &:hover{
+          background-color: #2A3F75;
+        }
+      }
+    }
+		.jy-drawer-tag {
+			position: absolute;
+			top: 150px;
+			right: 300px;
+			z-index: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 14px;
+			padding: 0 8px;
+			color: #fff;
+			font-size: 14px;
+			line-height: 16px;
+			text-align: center;
+			word-wrap: break-word;
+			word-break:break-all;
+			background: #1890ff;
+			border-radius: 4px 0 0 4px;
+			cursor: pointer;
+			transition: all 0.3s;
+			pointer-events: auto;
+		}
+    .jy-drawer-footer-slot {
+      flex: none;
+    }
+  }
+  &.jy-drawer-open {
+    // width: calc(100% - 230px);
+    .jy-drawer-mask {
+      height: 100%;
+      opacity: 1;
+    }
+    .jy-drawer-content-wrapper {
+      box-shadow: -2px 0 8px rgba(0,0,0,.15);
+    }
+  }
+}
