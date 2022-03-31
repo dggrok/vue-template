@@ -13,7 +13,7 @@
     "style": "stylelint \"src/**/*.(vue|scss|css)\" --fix",
     "clean": "npx rimraf dist lib es node_modules",
     "test:unit": "jest --clearCache && vue-cli-service test:unit",
-    "test:ci": "npm run lint && npm run test:unit"
+    "test:ci": "pnpm run lint && pnpm run test:unit"
   },
   "dependencies": {
     "axios": "^0.21.1",

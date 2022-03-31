@@ -1,34 +1,14 @@
 {
   "name": "vue-template",
   "version": "1.0.0",
-  "description": "基于lerna管理的多包项目，包含vue 中后台模版，vue组件库，公共utils库，以及文档平台",
+  "description": "基于pnpm管理的多包项目，包含vue 中后台模版，vue组件库，公共utils库，以及文档平台",
   "private": true,
-  "workspaces": {
-    "packages": [
-      "docs/*",
-      "packages/*",
-      "projects/*"
-    ],
-    "nohoist": [
-      "**/@vue/cli-plugin-babel",
-      "**/@vue/cli-plugin-babel/**",
-      "**/@vue/cli-plugin-eslint",
-      "**/@vue/cli-plugin-eslint/**",
-      "**/normalize.css",
-      "**/normalize.css/**",
-      "**/nprogress",
-      "**/nprogress/**",
-      "**/element-ui",
-      "**/element-ui/**"
-    ]
-  },
   "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "components:dev": "lerna exec --scope @cyw/vue-components npm run dev",
-    "components:build": "lerna exec --scope @cyw/vue-components npm run build",
-    "docs:dev": "lerna exec --scope @cyw/vue-components-docs npm run dev",
-    "docs:build": "lerna exec --scope @cyw/vue-components-docs npm run build",
-    "admin:dev": "lerna exec --scope @cyw/vue-admin npm run dev",
+    "components:dev": "pnpm --filter @cyw/vue-components dev",
+    "components:build": "pnpm --filter @cyw/vue-components build",
+    "docs:dev": "pnpm --filter @cyw/vue-components-docs dev",
+    "docs:build": "pnpm --filter @cyw/vue-components-docs build",
+    "admin:dev": "pnpm --filter @cyw/vue-admin dev",
     "build": "node scripts/build.js",
     "clean": "node scripts/clean.js",
     "precommit": "lint-staged",
@@ -52,8 +32,8 @@
     "@commitlint/cli": "^16.2.1",
     "commitlint-config-gitmoji": "^2.2.5",
     "eslint": "7.16.0",
+    "eslint-config-vue2": "^1.0.0",
     "husky": "^7.0.4",
-    "lerna": "^4.0.0",
     "lint-staged": "^12.3.4",
     "stylelint": "13.13.1"
   }

@@ -10,10 +10,10 @@
   "types": "es/index.d.ts",
   "sideEffects": "false",
   "scripts": {
-    "build": "npx rimraf dist lib es && npm run build:es && npm run build:lib",
+    "build": "npx rimraf dist lib es && npm run build:es && pnpm run build:lib",
     "build:es": "tsc --project ./tsconfig.json --incremental",
     "build:lib": "tsc --project ./tsconfig.lib.json --incremental",
-    "build:dev": "npx rimraf dist lib es && npm run build:es-dev && npm run build:lib-dev",
+    "build:dev": "npx rimraf dist lib es && pnpm run build:es-dev && pnpm run build:lib-dev",
     "build:es-dev": "tsc --project ./tsconfig.json --incremental -w",
     "build:lib-dev": "tsc --project ./tsconfig.lib.json --incremental -w",
     "lint-staged.js": "eslint --ext .js,.jsx,.ts,.tsx ",

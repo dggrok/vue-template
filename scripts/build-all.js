@@ -15,9 +15,9 @@ function buildPKG() {
         console.log(chalk.green("Start build ..."));
       }
       execSync(
-        `lerna exec ${modules
-          .map((module) => `--scope=${scopeOfModule[module]}`)
-          .join(" ")} -- yarn build`,
+        `pnpm ${modules
+          .map((module) => `--filter ${scopeOfModule[module]}`)
+          .join(" ")} build`,
         (error) => {
           if (error) {
             console.log(chalk.red(error));

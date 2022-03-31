@@ -19,7 +19,7 @@ function buildPKG(scopes) {
     console.log(chalk.green("Start build packages ..."));
     scopes.forEach((scope) => {
       let errMsg = "";
-      execSync(`lerna exec --scope=${scope} -- yarn build`, (error) => {
+      execSync(`pnpm --filter ${scope} build`, (error) => {
         if (error) {
           errMsg = error;
           console.log(chalk.red(error));
@@ -28,7 +28,7 @@ function buildPKG(scopes) {
       if (errMsg) {
         errMsg = "";
       } else {
-        console.log(chalk.green(`[${scope}] yarn build success`));
+        console.log(chalk.green(`[${scope}] build success`));
       }
     });
     console.log(chalk.green("Finish build packages"));

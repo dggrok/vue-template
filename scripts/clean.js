@@ -23,7 +23,7 @@ async function huskyInit(scopes) {
     console.log(chalk.green("Start clean ..."));
     scopes.forEach((scope) => {
       let errMsg = "";
-      execSync(`lerna exec --scope=${scope} -- yarn clean`, (error) => {
+      execSync(`pnpm --filter ${scope} clean`, (error) => {
         if (error) {
           errMsg = error;
           console.log(chalk.red(error));
