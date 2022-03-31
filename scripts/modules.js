@@ -5,6 +5,7 @@ module.exports = {
 
   packages: [
     "packages/vue-components",
+    "packages/vue-utils"
   ],
 
   projects: [

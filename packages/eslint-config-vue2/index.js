@@ -7,19 +7,34 @@ module.exports = {
     browser: true,
     es6: true
   },
+  // 指定如何解析语法。可以为空，但若不为空，只能配该值
+  parser: 'vue-eslint-parser',
+  // 优先级低于parse的语法解析配置
+  parserOptions: {
+    // 指定ESlint的解析器
+    parser: '@typescript-eslint/parser',
+    // 允许使用ES语法
+    ecmaVersion: 2020,
+    // 允许使用import
+    sourceType: 'module',
+    // 允许解析JSX
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.vue']
+        extensions: ['.js', '.jsx', '.vue', '.ts']
       }
     },
-    'import/extensions': ['.js', '.vue']
+    'import/extensions': ['.js', '.vue', '.ts']
   },
-  extends: ['plugin:vue/recommended', 'plugin:import/errors', 'plugin:import/warnings'],
-  parserOptions: {
-    parser: 'babel-eslint',
-    sourceType: 'module'
-  },
+  extends: ['plugin:vue/recommended', 'plugin:import/errors', 'plugin:import/warnings', 'plugin:@typescript-eslint/recommended', './import-sort'],
+  // parserOptions: {
+  //   parser: 'babel-eslint',
+  //   sourceType: 'module'
+  // },
   rules: {
     'comma-dangle': OFF,
     'vue/eqeqeq': ['error', 'always', { null: 'ignore' }],
@@ -73,7 +88,6 @@ module.exports = {
       }
     ],
     'vue/html-self-closing': 'off',
-    'vue/no-mutating-props': 'off',
     'vue/singleline-html-element-content-newline': 'off', // 带属性的标签中的内容需另起一行
     'vue/multiline-html-element-content-newline': 'off', // 元素中有多行内容，需每行内容各占一行
     'vue/no-v-html': 'off', // 关闭禁止使用v-html的规定
@@ -315,8 +329,11 @@ module.exports = {
     'import/no-unresolved': [
       ERROR,
       {
-        ignore: ['^@/', '^@']
+        ignore: ['^@/', '^@', '^_c/', '^_c', '^_api/', '^_api', '^_lib/', '^_lib']
       }
-    ]
+    ],
+    '@typescript-eslint/no-var-requires': OFF,
+    '@typescript-eslint/no-empty-function': WARN,
+    '@typescript-eslint/no-this-alias': OFF,
   }
 };
