@@ -1,0 +1,33 @@
+{
+  "name": "@cyw/vue-utils",
+  "version": "1.0.0",
+  "description": "Vue 工具库",
+  "author": "Yaw_chen",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "sideEffects": "false",
+  "scripts": {
+    "build": "npx rimraf dist lib es && npm run build:es && npm run build:lib",
+    "build:es": "tsc --project ./tsconfig.json --incremental",
+    "build:lib": "tsc --project ./tsconfig.lib.json --incremental",
+    "build:dev": "npx rimraf dist lib es && npm run build:es-dev && npm run build:lib-dev",
+    "build:es-dev": "tsc --project ./tsconfig.json --incremental -w",
+    "build:lib-dev": "tsc --project ./tsconfig.lib.json --incremental -w",
+    "lint-staged.js": "eslint --ext .js,.jsx,.ts,.tsx ",
+    "clean": "npx rimraf dist lib es node_modules"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@commitlint/cli": "12.1.4",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.4",
+    "eslint": "7.16.0",
+    "eslint-config-vue2": "^1.0.0",
+    "husky": "6.0.0",
+    "lint-staged": "10.2.8",
+    "commitlint-config-gitmoji": "2.2.5"
+  }
+}

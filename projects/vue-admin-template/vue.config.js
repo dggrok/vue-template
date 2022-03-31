@@ -28,6 +28,15 @@ module.exports = {
   outputDir: 'dist',
   assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [
+          require('autoprefixer')()
+        ]
+      }
+    }
+  },
   productionSourceMap: false,
   devServer: {
     port: port,
