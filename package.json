@@ -24,6 +24,10 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "components:dev": "lerna exec --scope @cyw/vue-components npm run dev",
+    "components:build": "lerna exec --scope @cyw/vue-components npm run build",
+    "docs:dev": "lerna exec --scope @cyw/vue-components-docs npm run dev",
+    "docs:build": "lerna exec --scope @cyw/vue-components-docs npm run build",
     "admin:dev": "lerna exec --scope @cyw/vue-admin npm run dev",
     "build": "node scripts/build.js",
     "clean": "node scripts/clean.js",
