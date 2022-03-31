@@ -1,6 +1,6 @@
 module.exports = {
   docs: [
-    // "docs/jy-vue-components-docs",
+    "docs/vue-components-docs",
   ],
 
   packages: [

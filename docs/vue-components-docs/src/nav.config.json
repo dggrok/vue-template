@@ -1,0 +1,89 @@
+{
+  "zh-CN": {
+    "component": [
+      {
+        "name": "更新日志",
+        "path": "/changelog"
+      },
+      {
+        "name": "开发指南",
+        "children": [
+          {
+            "path": "/installation",
+            "name": "安装"
+          }
+        ]
+      },
+      {
+        "name": "组件",
+        "groups": [
+          {
+            "groupName": "Basic",
+            "list": [
+              {
+                "path": "/button",
+                "title": "Button 按钮"
+              }
+            ]
+          },
+          {
+            "groupName": "Form",
+            "list": [
+              {
+                "path": "/treeSelect",
+                "title": "TreeSelect 树形选择器"
+              }
+            ]
+          },
+          {
+            "groupName": "Data",
+            "list": [
+              {
+                "path": "/table",
+                "title": "Table 表格"
+              }
+            ]
+          },
+          {
+            "groupName": "Navigation",
+            "list": [
+              {
+                "path": "/dropdown",
+                "title": "Dropdown 下拉菜单"
+              }
+            ]
+          },
+          {
+            "groupName": "Others",
+            "list": [
+              {
+                "path": "/drawer",
+                "title": "Drawer 抽屉"
+              },
+              {
+                "path": "/search",
+                "title": "Search 搜索"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "utils": [
+      {
+        "name": "开发指南",
+        "children": [
+          {
+            "path": "/installation",
+            "name": "utils安装"
+          }
+        ]
+      },
+      {
+        "name": "数组",
+        "path": "/array",
+        "title": "数组"
+      }
+    ]
+  }
+}
