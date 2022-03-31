@@ -1,5 +1,5 @@
 module.exports = {
-  'docs/jy-vue-components-docs': '@jy-fe/vue-components-docs',
+  'docs/vue-components-docs': '@cyw/vue-components-docs',
 
   'packages/vue-components': '@cyw/vue-components',
   'packages/vue-utils': '@cyw/vue-utils',
